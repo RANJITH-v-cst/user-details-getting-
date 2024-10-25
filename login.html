@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <title>req,res getting</title>
+</head>
+<style>
+    .bd{
+    background-image: url('https://img.freepik.com/free-vector/halftone-background-with-circles_23-2148907689.jpg?w=996&t=st=1726478872~exp=1726479472~hmac=37fc8de1fc8d85ffca18a88267e880db0f0d70363283af65d1761e7f10dd46f1');
+    background-repeat: no-repeat;
+    background-position: center;
+    color: aliceblue;
+    background-size: cover;
+ }
+ .tr{
+    border-radius: 10px;
+
+ }
+ .fr{
+   backdrop-filter: blur(15px);
+   animation: rotate 2s ease-in-out forwards;
+   overflow: hidden;
+ }
+ .in{
+    background: none;
+    padding: 10px;
+    margin: 5px;
+    color: aliceblue;
+    backdrop-filter: blur(10px);
+    text-decoration-color: aliceblue;
+    
+ }
+ @keyframes rotate {
+    0% {
+    transform: translateY(100px); /* Start position (down) */
+    opacity: 0; 
+  }
+  100% {
+    transform: translateY(0); 
+    opacity: 1;
+  }
+        }
+</style>
+<body class="bd">
+    <div class="nav" style="">
+        <ul
+            class="nav nav-tabs gap-1 m-1 p-1"
+            id="navId"
+            role="tablist"
+        >
+            <li class="nav-item p-1 m-1 rounded-3 border border-2 bg-white text-bold font-3 hover ">
+                <a
+                    href="#tab1Id"
+                    
+                    data-bs-toggle="tab"
+                    aria-current="page"
+                    >Home</a
+                >
+            </li>
+            <li class="nav-item p-1 m-1 rounded-3 border border-2 bg-white text-bold font-3">
+                <a
+                    href="#tab1Id"
+                    data-bs-toggle="tab"
+                    aria-current="page"
+                    >About</a
+                >
+            </li>
+            <li class="nav-item p-1 m-1 rounded-3 border border-2 bg-white text-bold font-3">
+                <a
+                    href="http//:localhost:3000/app.html/"
+                    data-bs-toggle="tab"
+                    aria-current="page"
+                    >SignIn</a
+                >
+            </li>
+            
+        </ul>
+        </div>
+    <div class="d-flex justify-content-center m-3 bg-img ">
+    <form action="/loginuser" method="POST" class=" border border-4 w-50 d-grid rounded-5 fr  fw-bold ">
+        <div class="text-white m-2 p-2 text-bold text-md-center fw-bold h1 ">LogIn</div>
+        <div class="mb-3 p-2 m-2 fs-5">
+            <label for="username" class="form-label">Enter your Username</label>
+            <input
+                type="text"
+                class="form-control rounded-4 in border border-white border-2 text-white"
+                name="username"
+                id="username"
+                required
+                placeholder="username"
+              
+            />
+        </div>
+        <div class="mb-3 p-2 m-2 fs-5">
+            <label for="" class="form-label">Enter your Password</label>
+            <input
+                type="password "
+                class="form-control rounded-4 in border border-white border-2"
+                name="password"
+                id="password"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
+                required
+                placeholder="your password likes this patter Aa@1"
+            />
+        </div>
+        <div class="d-flex justify-content-center p-2 m-2 w-100">
+            <button 
+            class="btn-info rounded-3 border border-white fs-5"
+                type="submit"   
+            >
+                submit
+            </button>
+            <a href="http://localhost:3000/" class="p-2" action="/" method="GET">Are You New user?</a> 
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
